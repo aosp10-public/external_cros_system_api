@@ -62,10 +62,6 @@ const char kCryptohomeInstallAttributesIsInvalid[] =
     "InstallAttributesIsInvalid";
 const char kCryptohomeInstallAttributesIsFirstInstall[] =
     "InstallAttributesIsFirstInstall";
-const char kCryptohomeStoreEnrollmentState[] =
-    "StoreEnrollmentState";
-const char kCryptohomeLoadEnrollmentState[] =
-    "LoadEnrollmentState";
 const char kCryptohomeTpmIsAttestationPrepared[] = "TpmIsAttestationPrepared";
 const char kCryptohomeTpmIsAttestationEnrolled[] = "TpmIsAttestationEnrolled";
 const char kCryptohomeTpmAttestationCreateEnrollRequest[] =
@@ -108,6 +104,8 @@ const char kCryptohomeTpmAttestationSetKeyPayload[] =
     "TpmAttestationSetKeyPayload";
 const char kCryptohomeTpmAttestationDeleteKeys[] =
     "TpmAttestationDeleteKeys";
+const char kCryptohomeTpmAttestationGetEnrollmentId[] =
+    "TpmAttestationGetEnrollmentId";
 // TODO(isandrk): Deprecated, remove on (or before) 2017/09/21 - after the
 // Chromium side has been changed to use the new TpmGetVersionStructured.
 const char kCryptohomeTpmGetVersion[] = "TpmGetVersion";
