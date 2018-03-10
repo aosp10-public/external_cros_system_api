@@ -154,3 +154,41 @@ message WriteFileOptionsProto {
   // Length of data being written.
   optional int32 length = 4;
 }
+
+// Used for passing inputs into SmbProvider.CreateDirectory().
+message CreateDirectoryOptionsProto {
+  // ID of the mount returned from Mount().
+  optional int32 mount_id = 1;
+  // Path of the directory to be created. Paths are relative to the mount root.
+  // (e.g. "/testfolder/dogs")
+  optional string directory_path = 2;
+  // Boolean indicating whether the create should be recursive, meaning the
+  // parent directories will also be created if they currently don't exist.
+  optional bool recursive = 3;
+}
+
+// Used for passing inputs into SmbProvider.MoveEntry().
+message MoveEntryOptionsProto {
+  // ID of the mount returned from Mount().
+  optional int32 mount_id = 1;
+  // Source path of the entry to be moved. This can be a file or directory path.
+  // Paths are relative to the mount root. (e.g. "/testfolder/dog.jpg")
+  optional string source_path = 2;
+  // Destination path for the entry to be moved to. This must be a non-existent
+  // file or directory path. Paths are relative to the mount
+  // root. (e.g. "/testfolder/dog.jpg")
+  optional string target_path = 3;
+}
+
+// Used for passing inputs into SmbProvider.CopyEntry().
+message CopyEntryOptionsProto {
+  // ID of the mount returned from Mount().
+  optional int32 mount_id = 1;
+  // Source path of the entry to be copied. This can be a file or directory
+  // path. Paths are relative to the mount root. (e.g. "/testfolder/dog.jpg")
+  optional string source_path = 2;
+  // Destination path for the entry to be copied to. This must be a non-existent
+  // file or directory path. Paths are relative to the mount root.
+  // (e.g. "/testfolder/dog.jpg")
+  optional string target_path = 3;
+}
