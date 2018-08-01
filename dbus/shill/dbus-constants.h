@@ -101,6 +101,7 @@ const char kWifiAuthMode[] = "WiFi.AuthMode";
 const char kWifiChannelProperty[] = "WiFi.Channel";
 const char kWifiPreferredDeviceProperty[] = "WiFi.PreferredDevice";
 const char kWifiRoamThresholdProperty[] = "WiFi.RoamThreshold";
+const char kWifiFTEnabled[] = "WiFi.FTEnabled";
 
 // Flimflam EAP property names.
 const char kEapIdentityProperty[] = "EAP.Identity";
@@ -580,9 +581,11 @@ const char kErrorEapLocalTlsFailed[] = "eap-local-tls-failed";
 const char kErrorEapRemoteTlsFailed[] = "eap-remote-tls-failed";
 
 // Manager property names.
+const char kAlwaysOnVpnPackageProperty[] = "AlwaysOnVpnPackage";
 const char kDefaultServiceProperty[] = "DefaultService";
+const char kDhcpPropertyHostnameProperty[] = "DHCPProperty.Hostname";
+const char kDhcpPropertyVendorClassProperty[] = "DHCPProperty.VendorClass";
 const char kDisableWiFiVHTProperty[] = "DisableWiFiVHT";
-const char kHostNameProperty[] = "HostName";
 const char kIgnoredDNSSearchPathsProperty[] = "IgnoredDNSSearchPaths";
 const char kLinkMonitorTechnologiesProperty[] =
     "LinkMonitorTechnologies";
